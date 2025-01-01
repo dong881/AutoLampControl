@@ -18,10 +18,10 @@ try:
 
         # 判斷是否在晚上2點到早上8點30分之間
         if (current_hour == 2 and current_minute >= 0) or (2 < current_hour < 8) or (current_hour == 8 and current_minute <= 30):
-            # 設定GPIO HIGH
+            # 設定GPIO LOW
             GPIO.output(GPIO_PIN, GPIO.LOW)
         else:
-            # 設定GPIO LOW
+            # 設定GPIO HIGH
             GPIO.output(GPIO_PIN, GPIO.HIGH)
         
         # 每分鐘檢查一次
